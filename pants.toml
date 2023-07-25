@@ -1,0 +1,34 @@
+[GLOBAL]
+pants_version = "2.16.0"
+
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.python.lint.black",
+  "pants.backend.experimental.python.lint.ruff",
+  #"pants.backend.python.typecheck.mypy",
+]
+
+[source]
+root_patterns = [
+  "/apps/*",
+  "/libs/*",
+]
+
+[python]
+enable_resolves = true
+interpreter_constraints = [">=3.10,<4"]
+
+[python.resolves]
+python-default = "3rdparty/python/default.lock"
+#mypy = "3rdparty/python/mypy.lock"
+
+#[mypy]
+#install_from_resolve = "mypy"
+##requirements =["//3rdparty/python:mypy"]  # Use these requirements from the lockfile.
+
+[generate-lockfiles]
+diff = true
+
+[anonymous-telemetry]
+enabled = false
+
