@@ -12,6 +12,39 @@ files = [
 ]
 
 [[package]]
+name = "example-lib-core"
+version = "0.1.0"
+description = ""
+optional = false
+python-versions = "^3.10"
+files = []
+develop = true
+
+[package.dependencies]
+pydantic = "^2.1.0"
+
+[package.source]
+type = "directory"
+url = "../../libs/example-lib-core"
+
+[[package]]
+name = "example-lib-extended"
+version = "0.1.0"
+description = ""
+optional = false
+python-versions = "^3.10"
+files = []
+develop = true
+
+[package.dependencies]
+example-lib-core = {path = "../example-lib-core", develop = true}
+pydantic = "^2.1.0"
+
+[package.source]
+type = "directory"
+url = "../../libs/example-lib-extended"
+
+[[package]]
 name = "pydantic"
 version = "2.1.0"
 description = "Data validation using Python type hints"
@@ -157,4 +190,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "89cbc7f064bf0a77fc3aee9578d0d68bda6c3a917005f7edd417e77ab48c3d76"
+content-hash = "4477c6ac4105676f59839077d220e6df4daab7b9036c13ce55a59254f4c0703d"

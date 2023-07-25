@@ -8,6 +8,7 @@ packages = [{include = "example_app_2"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 pydantic = "^2.1.0"
+example-lib-extended = {path = "../../libs/example-lib-extended", develop = true}
 
 
 [build-system]

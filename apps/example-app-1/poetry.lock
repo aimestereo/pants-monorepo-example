@@ -12,6 +12,22 @@ files = [
 ]
 
 [[package]]
+name = "example-lib-core"
+version = "0.1.0"
+description = ""
+optional = false
+python-versions = "^3.10"
+files = []
+develop = true
+
+[package.dependencies]
+pydantic = "^2.1.0"
+
+[package.source]
+type = "directory"
+url = "../../libs/example-lib-core"
+
+[[package]]
 name = "pydantic"
 version = "2.1.0"
 description = "Data validation using Python type hints"
@@ -157,4 +173,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "89cbc7f064bf0a77fc3aee9578d0d68bda6c3a917005f7edd417e77ab48c3d76"
+content-hash = "73146f8c28652d770e52bf861b2a7c29e563a3dc02978daa3d15d1128fda6eb0"
